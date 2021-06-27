@@ -46,6 +46,11 @@ namespace Nobox.WPF.Controls.CommandConsole
                 Scroller.ScrollToBottom();
             }
         }
+
+        private void CommandConsoleControl_GotFocus(object sender, RoutedEventArgs e)
+        {
+            InputBlock.Focus();
+        }
     }
 
     public enum ConsoleEntryType { MSG, ERROR }
