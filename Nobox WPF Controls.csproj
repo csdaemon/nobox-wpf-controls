@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2EF86640-1C41-41F9-A704-CEC14FFF9D6E}</ProjectGuid>
     <OutputType>library</OutputType>
-    <RootNamespace>Nobox_WPF_Controls</RootNamespace>
+    <RootNamespace>Nobox.WPF.Controls</RootNamespace>
     <AssemblyName>Nobox.WPF.Controls</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -30,6 +30,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>KeyFile.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -58,6 +64,8 @@
     <Compile Include="CommandConsole\CommandHandler.cs" />
     <Compile Include="CommandConsole\CommandInvoker.cs" />
     <Compile Include="CommandConsole\ConsoleCommand.cs" />
+    <Compile Include="CommandConsole\ConsoleContent.cs" />
+    <Compile Include="CommandConsole\ConsoleEntry.cs" />
     <Compile Include="CommandConsole\PromptCommandHandler.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +87,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="KeyFile.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

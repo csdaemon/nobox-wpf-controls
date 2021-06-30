@@ -8,9 +8,9 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Nobox WPF Controls")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Nobox WPF Controls")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Trollhive")]
 [assembly: AssemblyProduct("Nobox WPF Controls")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
