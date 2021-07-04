@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Nobox.WPF.Controls.CommandConsole
 {
-    class CommandInvoker
+    public class CommandInvoker
     {
         private static CommandInvoker staticInvoker = new CommandInvoker();
 

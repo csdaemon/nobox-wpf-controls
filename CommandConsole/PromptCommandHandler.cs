@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Nobox.WPF.Controls.CommandConsole
 {
@@ -41,8 +42,11 @@ namespace Nobox.WPF.Controls.CommandConsole
             private void EchoCommandExecute(object param)
             {
                 List<string> commandString = param as List<string>;
-                TargetConsole.ConsoleOutput.Add(new ConsoleEntry(string.Join(" ", commandString.Skip(1))));
 
+                Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    TargetConsole.ConsoleOutput.Add(new ConsoleEntry(string.Join(" ", commandString.Skip(1))));
+                }));
             }
         }
 
