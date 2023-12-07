@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>KeyFile.pfx</AssemblyOriginatorKeyFile>
@@ -54,6 +54,14 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\SimpleCommand.cs" />
+    <Compile Include="Logging\LoggingConsoleControl.xaml.cs">
+      <DependentUpon>LoggingConsoleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFUtility\BooleanInversion.cs" />
+    <Compile Include="WPFUtility\BooleanToVisibility.cs" />
+    <Compile Include="WPFUtility\MathConverter.cs" />
+    <Compile Include="WPFUtility\StarWidthConverter.cs" />
     <Page Include="CommandConsole\CommandConsoleControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -67,9 +75,23 @@
     <Compile Include="CommandConsole\ConsoleContent.cs" />
     <Compile Include="CommandConsole\ConsoleEntry.cs" />
     <Compile Include="CommandConsole\PromptCommandHandler.cs" />
+    <Page Include="Logging\LoggingConsoleControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProgressDialog\ProgressBarDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Framework\RelayCommand.cs" />
+    <Compile Include="ProgressDialog\ProgressBarDialog.xaml.cs">
+      <DependentUpon>ProgressBarDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressDialog\ProgressDialogResult.cs" />
+    <Compile Include="ProgressDialog\ProgressDialogSettings.cs" />
+    <Compile Include="ProgressDialog\WindowSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
