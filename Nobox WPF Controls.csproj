@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\SimpleCommand.cs" />
+    <Compile Include="DotNet\DotNetHelper.cs" />
     <Compile Include="Logging\LoggingConsoleControl.xaml.cs">
       <DependentUpon>LoggingConsoleControl.xaml</DependentUpon>
     </Compile>
